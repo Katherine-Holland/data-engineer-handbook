@@ -1,4 +1,8 @@
-modules = ["bash", "python-3.11"]
+modules = ["python-3.12", "bash", "nix", "postgresql-16"]
+run = "python3 manage.py runserver"
 
 [nix]
 channel = "stable-24_05"
+
+[deployment]
+run = ["sh", "-c", "python3 manage.py runserver"]
